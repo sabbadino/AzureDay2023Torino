@@ -47,6 +47,7 @@ namespace ChatGptBot.Services
             //// 2) history and temperature and context and system message
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(ConversationManagerBrick)));
             //ADD builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetContextBrick)));
+            //// OR ADD builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetContextBrickWithSql)));
             //ADD builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
@@ -72,7 +73,7 @@ namespace ChatGptBot.Services
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
             ////  E
-            
+
             // 5) above plus max token guard
             //ADD builder.Add(chainBricks.Single(i => i.GetType() == typeof(QuestionLengthGuardBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(QuestionTranslatorBrick)));
