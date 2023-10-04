@@ -61,7 +61,7 @@ function App() {
   return (
     <div>
       <Drawer
-        anchor={"right"}
+        anchor={"left"}
         open={true}
         onClose={() => setChatOpen(false)}
       >
