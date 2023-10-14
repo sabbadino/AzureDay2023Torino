@@ -37,6 +37,7 @@ namespace ChatGptBot.Services
             //  E 
 
             //// 1) history and temperature
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
             builder.Add(chainBricks.Single(i => i.GetType() == typeof(ConversationManagerBrick)));
             builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
             builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
