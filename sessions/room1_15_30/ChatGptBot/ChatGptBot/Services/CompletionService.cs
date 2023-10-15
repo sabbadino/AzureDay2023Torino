@@ -36,12 +36,16 @@ namespace ChatGptBot.Services
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
             //  E 
 
-            //// 1) history and temperature
-            builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
-            builder.Add(chainBricks.Single(i => i.GetType() == typeof(ConversationManagerBrick)));
-            builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
-            builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
-            //// E
+            // 1) history and temperature
+            builder.Add(chainBricks.
+                Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
+            builder.Add(chainBricks.
+                Single(i => i.GetType() == typeof(ConversationManagerBrick)));
+            builder.Add(chainBricks.
+                Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
+            builder.Add(chainBricks.
+                Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
+            // E
 
 
 
@@ -52,7 +56,7 @@ namespace ChatGptBot.Services
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
-            ////  E
+            //////  E
 
 
             //// 3) above + translate S 
@@ -77,7 +81,7 @@ namespace ChatGptBot.Services
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
             ////  E
 
-            // 5) above plus max token guard (user question and total payload to ai
+            // 5) above plus max token guard (user question and MaxTokenGuardBrick)
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(QuestionLengthGuardBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(QuestionTranslatorBrick)));
             //builder.Add(chainBricks.Single(i => i.GetType() == typeof(ConversationManagerBrick)));
