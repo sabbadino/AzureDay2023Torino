@@ -9,7 +9,8 @@ function App() {
   const defaultConversation: Message[] = [
     {
       author: "Bot",
-      text: "Hello I am Emma, myMSC virtual assistant. How can I help you with?",
+      //2text: "Hello I am Emma, myMSC virtual assistant. How can I help you with?",
+      text: "Hello I am Emma, what brings you here today?",
       time: getTime(),
     },
   ];
@@ -61,8 +62,8 @@ function App() {
   return (
     <div>
       <Drawer
-        anchor={"right"}
-        open={chatOpen}
+        anchor={"left"}
+        open={true}
         onClose={() => setChatOpen(false)}
       >
         <Chat
