@@ -10,7 +10,7 @@ function App() {
     {
       author: "Bot",
       //2text: "Hello I am Emma, myMSC virtual assistant. How can I help you with?",
-      text: "Hello I am Emma, what brings you here today?",
+      text: "Hello I am Oscar, what brings you here today?",
       time: getTime(),
     },
   ];

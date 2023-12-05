@@ -51,7 +51,7 @@ public class CompletionEndpointBrick : LangChainBrickBase, ILangChainBrick, ISin
 
             AddChatHistory(chatCompletionsOptions, question.ConversationHistoryMessages);
 
-            chatCompletionsOptions.Messages.Add(new ChatMessage(ChatRole.User, $"user prompt: {question.UserQuestion.Text}"));
+            chatCompletionsOptions.Messages.Add(new ChatMessage(ChatRole.User, $"{question.UserQuestion.Text}  (answer me only if the question is not out of the scope of the assistant domain, otherwise just say 'I don't know' and apologize for the inconvenience. Do not use your existing knowledge to answer questions that are unrelated to the chatbot's purpose)"));
 
             chatCompletionsOptions.Temperature = question.QuestionOptions.Temperature;
 

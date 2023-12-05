@@ -37,14 +37,14 @@ namespace ChatGptBot.Services
             //  E 
 
             // 1) history and temperature
-            builder.Add(chainBricks.
-                Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
-            builder.Add(chainBricks.
-                Single(i => i.GetType() == typeof(ConversationManagerBrick)));
-            builder.Add(chainBricks.
-                Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
-            builder.Add(chainBricks.
-                Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
+            //builder.Add(chainBricks.
+            //    Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
+            //builder.Add(chainBricks.
+            //    Single(i => i.GetType() == typeof(ConversationManagerBrick)));
+            //builder.Add(chainBricks.
+            //    Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
+            //builder.Add(chainBricks.
+            //    Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
             // E
 
 
@@ -60,13 +60,13 @@ namespace ChatGptBot.Services
 
 
             //// 3) above + translate S 
-            //builder.Add(chainBricks.Single(i => i.GetType() == typeof(QuestionTranslatorBrick)));
-            //builder.Add(chainBricks.Single(i => i.GetType() == typeof(ConversationManagerBrick)));
-            //builder.Add(chainBricks.Single(i => i.GetType() == typeof(AnswerTranslatorBrick)));
-            //builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetContextBrick)));
-            //builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
-            //builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
-            //builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(QuestionTranslatorBrick)));
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(ConversationManagerBrick)));
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(AnswerTranslatorBrick)));
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetContextBrick)));
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetSystemMessageBrick)));
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(SetApiCallOptionsBrick)));
+            builder.Add(chainBricks.Single(i => i.GetType() == typeof(CompletionEndpointBrick)));
             //// E
 
             //// 4) above + question user length guard, change topic detector 

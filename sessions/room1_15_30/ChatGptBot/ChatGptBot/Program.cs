@@ -67,6 +67,7 @@ AzureKeyCredential credential = new(textTranslationKey);
 TextTranslationClient textTranslationClient = new(credential, textTranslationRegion);
 builder.Services.AddSingleton(textTranslationClient);
 builder.Services.AddHostedService<DefaultEmbeddingSetLoader>();
+builder.Services.AddHttpClient();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -76,7 +77,7 @@ app.UseSwaggerUI();
 
 
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
 app.UseAuthorization();
 
 app.UseCors("localhost");
